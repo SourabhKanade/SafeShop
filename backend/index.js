@@ -38,7 +38,6 @@ if(process.env.NODE_ENV === "production"){
   })
 }
 
-
 app.listen(process.env.PORT || 5000, () => {
   console.log("Backend server is running at port 5000!");
 });
