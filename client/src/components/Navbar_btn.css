@@ -1,0 +1,100 @@
+.btn {
+    min-width: 85px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    margin-left: 15px;
+    z-index: 0;
+    background: #fff;
+    overflow: hidden;
+    /* border: 2px solid #2c0b8e;
+    color: #2c0b8e; */
+    border: 2px solid #635294;
+    color: #635294;
+  }
+  .btn:hover {
+    color: #fff;
+  }
+  .btn:hover:after {
+    width: 100%;
+  }
+  .btn:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #944d4d;
+  }
+
+  /* --------------  login button  --------------  */
+
+  .login_btn {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid #2c0b8e;
+    background: #3d348b;
+    margin: auto;
+    text-align: center;
+  }
+  .login_btn:hover {
+    background: #fff;
+    color: #3f51b5;
+  }
+
+  /* LOGOUT BUTTON */
+
+  .logout_btn {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    z-index: 0;
+    background: #fff;
+    overflow: hidden;
+    border: 2px solid #2c0b8e;
+    color: #2c0b8e;
+  }
+  .logout_btn:hover {
+    color: #fff;
+  }
+  .logout_btn:hover:after {
+    width: 100%;
+  }
+  .logout_btn:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #3f51b5;
+  }
