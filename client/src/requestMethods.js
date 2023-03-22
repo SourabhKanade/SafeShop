@@ -16,7 +16,7 @@ const TOKEN = currentUser?.accessToken;
 // console.log(TOKEN);
 
 export const publicRequest = axios.create({
-  baseURL: BASE_URL
+  baseURL: "https://ninjashop.vercel.app/api"
 });
 
 export const userRequest = axios.create({
