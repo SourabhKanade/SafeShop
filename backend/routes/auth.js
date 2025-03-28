@@ -6,7 +6,6 @@ const jwt = require("jsonwebtoken");
 const nodemailer = require("nodemailer");
 const {MONGO_URL, PASS_SEC, JWT_SEC} = require('../config/keys')
 
-
 //REGISTER
 
 //GET USER
@@ -42,15 +41,12 @@ router.post("/register", async (req, res) => {
     email: req.body.email,
     password: CryptoJS.AES.encrypt(
       req.body.password,
-      PASS_SEC
-      // process.env.PASS_SEC
+      // PASS_SEC
+      process.env.PASS_SEC
     ).toString(),
     emailToken: crypto.randomBytes(64).toString('hex'),
     isVerified: false,
   });
-  // console.log(req.body.username)
-  //  console.log(req.body.email)
-  // console.log(req.body.password)
 
   try {
     const savedUser = await newUser.save();
@@ -70,7 +66,7 @@ router.post("/register", async (req, res) => {
         console.log(error)
       }
       else{
-        console.log("verifivction email is send to your gmail account")
+        console.log("verification email is send to your gmail account")
       }
     }) 
 }
@@ -86,14 +82,14 @@ router.post("/login", async (req, res) => {
   try {
     const user = await User.findOne({ username: req.body.username });
     !user && res.status(401).json("Wrong credentials!");
-
+    
     const hashedPassword = CryptoJS.AES.decrypt(
       user.password,
-      // process.env.PASS_SEC
-      PASS_SEC
+      process.env.PASS_SEC
+      // PASS_SEC
     );
     const OriginalPassword = hashedPassword.toString(CryptoJS.enc.Utf8);
-
+    
     OriginalPassword !== req.body.password &&
       res.status(401).json("Wrong credentials!");
 
@@ -102,8 +98,8 @@ router.post("/login", async (req, res) => {
         id: user._id,
         isAdmin: user.isAdmin,
       },
-      PASS_SEC,
-      // process.env.JWT_SEC,
+      // PASS_SEC,
+      process.env.JWT_SEC,
       {expiresIn:"3d"}
     );
 

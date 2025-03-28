@@ -13,8 +13,8 @@ router.put("/:id", verifyTokenAndAuthorization, async (req, res) => {
   if (req.body.password) {
     req.body.password = CryptoJS.AES.encrypt(
       req.body.password,
-      PASS_SEC,
-      // process.env.PASS_SEC
+      // PASS_SEC,
+      process.env.PASS_SEC
     ).toString();
   }
 

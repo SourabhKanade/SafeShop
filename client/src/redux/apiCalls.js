@@ -12,7 +12,7 @@ export const login = async (dispatch, user) => {
 };
 
 export const Logout = () => ({
-  type: "Logout"
+  type: "Logout",
 });
 
 // export const login = async (dispatch, user) => {

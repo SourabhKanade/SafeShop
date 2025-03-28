@@ -51,16 +51,6 @@ const Agreement = styled.span`
   margin: 20px 5px;
 `;
 
-// const invalid = styled.div`
-//   border-color: red;
-//   background: #fbdada;
-// `;
-
-// const control = styled.div`
-//   border-color: red;
-//   background: #fbdada;
-// `;
-
 export default function Register() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
