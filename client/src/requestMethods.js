@@ -18,7 +18,6 @@ export const publicRequest = axios.create({
   // baseURL: "https://ninjashop.vercel.app/api"
   baseURL: process.env.REACT_APP_API_URL,
 });
-
 export const userRequest = axios.create({
   baseURL: BASE_URL,
   header: { token: `Bearer ${TOKEN}` },
