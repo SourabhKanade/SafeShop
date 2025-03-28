@@ -16,7 +16,8 @@ const TOKEN = currentUser?.accessToken;
 
 export const publicRequest = axios.create({
   // baseURL: "https://ninjashop.vercel.app/api"
-  baseURL: process.env.REACT_APP_API_URL,
+  // baseURL: process.env.REACT_APP_API_URL,
+  baseURL: "https://safeshop-backend.onrender.com",
 });
 
 export const userRequest = axios.create({
